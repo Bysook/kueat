@@ -35,10 +35,16 @@ class _ExpandTextWidgetState extends State<ExpandTextWidget> {
   Widget build(BuildContext context) {
     return Container(
       child: secondText.isEmpty
-          ? SmallText(text: firstText)
+          ? SmallText(
+              color: AppColors.paraColor,
+              size: Dimensions.font14,
+              text: firstText)
           : Column(
               children: [
                 SmallText(
+                    height: 1.6,
+                    color: AppColors.paraColor,
+                    size: Dimensions.font14,
                     text: hiddenText
                         ? (firstText + "...")
                         : (firstText + secondText)),
@@ -50,12 +56,19 @@ class _ExpandTextWidgetState extends State<ExpandTextWidget> {
                   },
                   child: Row(
                     children: [
-                      SmallText(
-                        text: "Show more",
-                        color: AppColors.mainColor,
-                      ),
+                      hiddenText
+                          ? SmallText(
+                              text: "Show more",
+                              color: AppColors.mainColor,
+                            )
+                          : SmallText(
+                              text: "Show less",
+                              color: AppColors.mainColor,
+                            ),
                       Icon(
-                        Icons.arrow_drop_down,
+                        hiddenText
+                            ? Icons.arrow_drop_down
+                            : Icons.arrow_drop_up,
                         color: AppColors.mainColor,
                       )
                     ],

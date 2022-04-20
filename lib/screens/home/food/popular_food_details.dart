@@ -65,10 +65,14 @@ class PopularFoodDetail extends StatelessWidget {
                     AppColumn(text: "Spanish Paella"),
                     SizedBox(height: Dimensions.height20),
                     BigText(text: "Description"),
-                    ExpandTextWidget(
-                      text:
-                          "asdjbabsfjhasbdfjahsbdgahjsbdfpasfnskafjjoasdnijpasbdfgnijabsdfijhbasdfhbasdfnaipsudfbapsiodfjnakos`dfnaoskfnoajsdfhnjoasdbfijasbdfpjasdbfipahjsbdfasbdfpuasdbfpuajsdbfasdf",
-                    )
+                    SizedBox(height: Dimensions.height20),
+                    Expanded(
+                        child: SingleChildScrollView(
+                      child: ExpandTextWidget(
+                        text:
+                            "asdjbabsfjhasbdfjahsbdgahjsbdfpasfnskafjjoasdnijpasbdfgnijabsdfijhbasdfhbasdfnaipsudfbapsiodfjnakos`dfnaoskfnoajsdfhnjoasdbfijasbdfpjasdbfipahjsbdfasbdfpuasdbfpuajsdbfasdfdfnaoskfnoajsdfhnjoasdbfijasbdfpjasdbfipahjsbdfasbdfpuasdbfpuajsdbfasdfdfnaoskfnoajsdfhnjoasdbfijasbdfpjasdbfipahjsbdfasbdfpuasdbfpuajsdbfasdfdfnaoskfnoajsdfhnjoasdbfijasbdfpjasdbfipahjsbdfasbdfpuasdbfpuajsdbfasdfdfnaoskfnoajsdfhnjoasdbfijasbdfpjasdbfipahjsbdfasbdfpuasdbfpuajsdbfasdfdfnaoskfnoajsdfhnjoasdbfijasbdfpjasdbfipahjsbdfasbdfpuasdbfpuajsdbfasdfdfnaoskfnoajsdfhnjoasdbfijasbdfpjasdbfipahjsbdfasbdfpuasdbfpuajsdbfasdfdfnaoskfnoajsdfhnjoasdbfijasbdfpjasdbfipahjsbdfasbdfpuasdbfpuajsdbfasdfdfnaoskfnoajsdfhnjoasdbfijasbdfpjasdbfipahjsbdfasbdfpuasdbfpuajsdbfasdfdfnaoskfnoajsdfhnjoasdbfijasbdfpjasdbfipahjsbdfasbdfpuasdbfpuajsdbfasdfdfnaoskfnoajsdfhnjoasdbfijasbdfpjasdbfipahjsbdfasbdfpuasdbfpuajsdbfasdfdfnaoskfnoajsdfhnjoasdbfijasbdfpjasdbfipahjsbdfasbdfpuasdbfpuajsdbfasdfdfnaoskfnoajsdfhnjoasdbfijasbdfpjasdbfipahjsbdfasbdfpuasdbfpuajsdbfasdfdfnaoskfnoajsdfhnjoasdbfijasbdfpjasdbfipahjsbdfasbdfpuasdbfpuajsdbfasdfdfnaoskfnoajsdfhnjoasdbfijasbdfpjasdbfipahjsbdfasbdfpuasdbfpuajsdbfasdf",
+                      ),
+                    ))
                   ],
                 ),
               ))
