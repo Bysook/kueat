@@ -5,15 +5,17 @@ class SmallText extends StatelessWidget {
   final String text;
   double size;
   double height;
+  TextOverflow overflow;
 
-  SmallText({
-    Key? key,
-    this.color = const Color(0xFFccc7c5),
-    this.height = 1.2,
-    required this.text,
-    //Cuando se le pasa un texto mas largo de lo normal, añade puntos, esto es variable y puedes pasarle distintos tipos de valores a TxtOverflow.
-    this.size = 12,
-  }) : super(key: key);
+  SmallText(
+      {Key? key,
+      this.color = const Color(0xFFccc7c5),
+      this.height = 1.2,
+      required this.text,
+      //Cuando se le pasa un texto mas largo de lo normal, añade puntos, esto es variable y puedes pasarle distintos tipos de valores a TxtOverflow.
+      this.size = 12,
+      this.overflow = TextOverflow.ellipsis})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

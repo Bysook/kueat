@@ -38,4 +38,7 @@ class Dimensions {
 
   //Altura de container
   static double bottomHeightBar = screenHeight / 6.50;
+
+  //Altura  de splash
+  static double splashImg = screenHeight / 3.12;
 }

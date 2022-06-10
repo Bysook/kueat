@@ -1,0 +1,10 @@
+0 Hamburguesa
+1 Pizza
+2 Bebida
+3 Perrito Caliente
+4 Sushi
+5 CusCus Marroquí
+6 Helado
+7 Pollo Asado
+8 Kebab
+9 Tortilla Española

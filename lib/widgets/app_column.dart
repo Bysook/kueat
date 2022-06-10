@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/widgets/small_text.dart';
-
 import '../utils/colors.dart';
 import '../utils/dimensions.dart';
 import 'big_text.dart';
@@ -9,8 +7,19 @@ import 'icon_and_text_widget.dart';
 
 class AppColumn extends StatelessWidget {
   final String text;
+  final String? minutes;
+  final String? reviews;
+  final String? location;
+  final int? stars;
 
-  const AppColumn({Key? key, required this.text}) : super(key: key);
+  const AppColumn(
+      {Key? key,
+      required this.text,
+      this.minutes,
+      this.reviews,
+      this.stars = 0,
+      this.location})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,21 +34,21 @@ class AppColumn extends StatelessWidget {
           children: [
             Wrap(
               children: List.generate(
-                  5,
+                  2,
                   (index) => Icon(
                         Icons.star,
-                        color: AppColors.mainColor,
+                        color: Colors.yellow,
                         size: 15,
                       )),
             ),
             SizedBox(
               width: 10,
             ),
-            SmallText(text: "4.5"),
+            SmallText(text: stars.toString()),
             SizedBox(
               width: 10,
             ),
-            SmallText(text: "1998"),
+            SmallText(text: "2"),
             SizedBox(
               width: 3,
             ),
@@ -57,13 +66,11 @@ class AppColumn extends StatelessWidget {
                 text: "Normal",
                 iconColor: AppColors.iconColor1),
             IconAndTextWidget(
-                icon: Icons.location_on,
-                text: "1.5km",
-                iconColor: AppColors.mainColor),
+                icon: Icons.location_on, text: "1.5km", iconColor: Colors.blue),
             IconAndTextWidget(
                 icon: Icons.access_time_rounded,
                 text: "30min",
-                iconColor: AppColors.iconColor2)
+                iconColor: AppColors.mainColor)
           ],
         )
       ],
