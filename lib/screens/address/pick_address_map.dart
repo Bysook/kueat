@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/base/custom_button.dart';
 import 'package:food_delivery/controllers/location_controller.dart';
@@ -34,7 +33,7 @@ class _PickAddressMapState extends State<PickAddressMap> {
     super.initState();
     //Compruebo si el usuario ha seteado informacion o no
     if (Get.find<LocationController>().addressList.isEmpty) {
-      _initialPosition = LatLng(38.77369648887228, -3.397516591514719);
+      _initialPosition = LatLng(38.76973153980583, -3.393912599191721);
       _cameraPosition = CameraPosition(target: _initialPosition, zoom: 17);
     } else {
       //Si hay datos, podemos obtener estis datios de la base de datos

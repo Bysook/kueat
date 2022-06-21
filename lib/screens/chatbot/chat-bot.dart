@@ -2,7 +2,6 @@ import 'package:bubble/bubble.dart';
 import 'package:dialog_flowtter/dialog_flowtter.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/routes/route_helper.dart';
-import 'package:food_delivery/utils/dimensions.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 

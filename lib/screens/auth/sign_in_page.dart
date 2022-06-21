@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/base/custom_loader.dart';
@@ -9,7 +9,7 @@ import 'package:food_delivery/utils/dimensions.dart';
 import 'package:food_delivery/widgets/app_text_field.dart';
 import 'package:food_delivery/widgets/big_text.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+
 
 import '../../base/show_custom_message.dart';
 import '../../controllers/auth_controller.dart';

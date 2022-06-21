@@ -5,12 +5,11 @@ import 'package:food_delivery/utils/colors.dart';
 import 'package:food_delivery/utils/dimensions.dart';
 import 'package:food_delivery/utils/map_utils.dart';
 import 'package:food_delivery/widgets/big_text.dart';
-import 'package:food_delivery/widgets/icon_and_text_widget.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:tflite/tflite.dart';
 import 'dart:io';
 import 'dart:async';
-import 'package:tflite/tflite.dart';
 import '../../widgets/extendable_text.dart';
 
 class TensorFlowPage extends StatefulWidget {
@@ -19,10 +18,9 @@ class TensorFlowPage extends StatefulWidget {
 }
 
 class _TensorFlowPage extends State<TensorFlowPage> {
-  PickedFile? _image;
+  XFile? _image;
   bool _loading = false;
   List<dynamic>? _outputs;
-  String? _ingredientes;
 
   void initState() {
     super.initState();
@@ -58,27 +56,13 @@ class _TensorFlowPage extends State<TensorFlowPage> {
   }
 
   Future pickImage() async {
-    var image = await _picker.getImage(source: ImageSource.gallery);
+    var image = await _picker.pickImage(source: ImageSource.gallery);
     if (image == null) return null;
     setState(() {
       _loading = true;
       _image = image;
     });
     classifyImage(image);
-  }
-
-  Widget tipoDeDescripcion(String comida) {
-    String ingredientes = "";
-    print(comida.trim());
-    if (comida == "Hamburguesa") {
-      print("Entra");
-      ingredientes =
-          "500 g. de carne de ternera de calidad, 1 diente de ajo, 1 huevo Pedimos a nuestro carnicero que nos pique la carne que hayamos elegido para preparar las hamburguesas. Es importante no sólo elegir la carne sino que el carnicero la triture al momento. Cuando cortas una carne, lo que estás haciendo es romper los tejidos y hacer que se oxide. ";
-      return ExpandTextWidget(text: ingredientes);
-    }
-
-    return ExpandTextWidget(
-        text: "No existen los ingredientes de este elemento.");
   }
 
   final ImagePicker _picker = ImagePicker();
@@ -286,13 +270,13 @@ class _TensorFlowPage extends State<TensorFlowPage> {
                                           .toString()
                                           .trim() ==
                                       "Pizza") {
-                                    return "No importa la época del año ni el momento del día: una pizza siempre apetece, y si aprendemos a hacerlas bien en casa tendremos un repetorio infinito de ingredientes con las que prepararlas. Hacer masa de pizza casera es bien sencillo. Y baratísimo. Solo necesitamos harina, agua, levadura de panadería y aceite de oliva. Y, aunque hay muchas recetas, no es necesario hacer esta con más de tres horas de fermentación, lo que convierte a la pizza en un plato mucho menos complicado de planificar de lo que parece.";
+                                    return "No importa la época del año ni el momento del día: una pizza siempre apetece, y si aprendemos a hacerlas bien en casa tendremos un repetorio infinito de ingredientes con las que prepararlas. Hacer masa de pizza casera es bien sencillo. Y baratísimo. Solo necesitamos harina, agua, levadura de panadería y aceite de oliva. Y, aunque hay muchas recetas, no es necesario hacer esta con más de tres horas de fermentación.";
                                   } else if ("${_outputs![0]["label"]}"
                                           .replaceAll(RegExp(r'[0-9]'), '')
                                           .toString()
                                           .trim() ==
                                       "Kebab") {
-                                    return "El kebab es originario de Asia y Oriente Medio. Existen multitud de variedades tanto en la manera de servirlos como en la manera de prepararlos, aunque la forma que se le conoce normalmente es con pan de pita o pan durum junto con sus vegetales  correspondientes, cómo la lechuga, zanahoria, col, cebolla, tomate etc. A lo que tampoco le puede falta su salsa correspondiente que ya será a elegir dependiendo de vuestro gusto, pero que en cualquier caso puede ser: salsa yogurt, salsa picante o salsa especial de kebab.";
+                                    return "El kebab es originario de Asia y Oriente Medio. Existen multitud de variedades tanto en la manera de servirlos como en la manera de prepararlos, aunque la forma que se le conoce normalmente es con pan de pita o pan durum junto con sus vegetales  correspondientes, cómo la lechuga, zanahoria, col, cebolla, tomate etc. A lo que tampoco le puede falta su salsa correspondiente que ya será a elegir dependiendo de vuestro gusto.";
                                   } else if ("${_outputs![0]["label"]}"
                                           .replaceAll(RegExp(r'[0-9]'), '')
                                           .toString()
@@ -304,6 +288,12 @@ class _TensorFlowPage extends State<TensorFlowPage> {
                                           .toString()
                                           .trim() ==
                                       "Helado") {
+                                    return "Los helados de leche o crema son aquellos que en su composición contienen grasa láctea, leche en polvo y proteínas lácteas. Durante el proceso de elaboración han incorporado una determinada cantidad de aire. Se presentan de forma pastosa y a pesar de estar sometidos a bajas temperatura tienen que presentar una textura con la suficiente plasticidad para su servicio y consumo.";
+                                  } else if ("${_outputs![0]["label"]}"
+                                          .replaceAll(RegExp(r'[0-9]'), '')
+                                          .toString()
+                                          .trim() ==
+                                      "Tortilla Española") {
                                     return "Los helados de leche o crema son aquellos que en su composición contienen grasa láctea, leche en polvo y proteínas lácteas. Durante el proceso de elaboración han incorporado una determinada cantidad de aire. Se presentan de forma pastosa y a pesar de estar sometidos a bajas temperatura tienen que presentar una textura con la suficiente plasticidad para su servicio y consumo.";
                                   }
                                   return "No existen los ingredientes para este elemento.";
@@ -336,7 +326,7 @@ class _TensorFlowPage extends State<TensorFlowPage> {
 
   //camera method
   Future openGallery() async {
-    var piture = await _picker.getImage(source: ImageSource.gallery);
+    var piture = await _picker.pickImage(source: ImageSource.gallery);
     setState(() {
       _image = piture;
     });
@@ -344,7 +334,7 @@ class _TensorFlowPage extends State<TensorFlowPage> {
   }
 
   Future openCamera() async {
-    var image = await _picker.getImage(source: ImageSource.camera);
+    var image = await _picker.pickImage(source: ImageSource.camera);
 
     setState(() {
       _image = image;

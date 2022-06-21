@@ -3,8 +3,7 @@ import 'package:food_delivery/routes/route_helper.dart';
 import 'package:food_delivery/screens/home/food_page_body.dart';
 import 'package:food_delivery/utils/colors.dart';
 import 'package:food_delivery/utils/dimensions.dart';
-import 'package:food_delivery/widgets/big_text.dart';
-import 'package:food_delivery/widgets/small_text.dart';
+
 import 'package:get/get.dart';
 import '../../controllers/popular_product_controller.dart';
 import '../../controllers/recommended_product_controller.dart';
@@ -50,11 +49,6 @@ class _MainFoodPageState extends State<MainFoodPage> {
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Balinesia'),
                         )
-
-                        /*BigText(
-                            text: "KuEat",
-                            color: AppColors.mainColor,
-                            size: Dimensions.font26),*/
                       ],
                     ),
                     Center(

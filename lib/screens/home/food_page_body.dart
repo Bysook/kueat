@@ -1,17 +1,16 @@
 import 'dart:math';
 
 import 'package:dots_indicator/dots_indicator.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:food_delivery/controllers/popular_product_controller.dart';
 import 'package:food_delivery/controllers/recommended_product_controller.dart';
 import 'package:food_delivery/models/products_model.dart';
 import 'package:food_delivery/routes/route_helper.dart';
-import 'package:food_delivery/screens/home/food/popular_food_details.dart';
-import 'package:food_delivery/utils/app_constants.dart';
+
 import 'package:food_delivery/utils/colors.dart';
 import 'package:food_delivery/utils/dimensions.dart';
-import 'package:food_delivery/widgets/app_column.dart';
+
 import 'package:food_delivery/widgets/big_text.dart';
 import 'package:food_delivery/widgets/icon_and_text_widget.dart';
 import 'package:food_delivery/widgets/small_text.dart';
@@ -188,7 +187,8 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                                                       .toString(),
                                                   iconColor: Colors.amber),
                                               IconAndTextWidget(
-                                                  icon: Icons.location_on,
+                                                  icon: Icons
+                                                      .not_listed_location_sharp,
                                                   text: recommendedProduct
                                                       .recommendedProductList[
                                                           index]
@@ -330,7 +330,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                                   " reviews",
                               iconColor: Colors.amber),
                           IconAndTextWidget(
-                              icon: Icons.location_on,
+                              icon: Icons.not_listed_location_sharp,
                               text: popularProduct.location!,
                               iconColor: Colors.blue),
                           IconAndTextWidget(

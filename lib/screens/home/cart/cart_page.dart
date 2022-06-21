@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/base/no_data_page.dart';
 import 'package:food_delivery/controllers/auth_controller.dart';
@@ -7,13 +6,11 @@ import 'package:food_delivery/controllers/location_controller.dart';
 import 'package:food_delivery/controllers/popular_product_controller.dart';
 import 'package:food_delivery/controllers/recommended_product_controller.dart';
 import 'package:food_delivery/routes/route_helper.dart';
-import 'package:food_delivery/screens/home/main_food_page.dart';
-import 'package:food_delivery/utils/app_constants.dart';
+
 import 'package:food_delivery/utils/colors.dart';
 import 'package:food_delivery/utils/dimensions.dart';
 import 'package:food_delivery/widgets/app_icon.dart';
 import 'package:food_delivery/widgets/big_text.dart';
-import 'package:food_delivery/widgets/small_text.dart';
 import 'package:get/get.dart';
 
 class CartPage extends StatelessWidget {
@@ -290,7 +287,7 @@ class CartPage extends StatelessWidget {
                                     Get.toNamed(RouteHelper.getAddressPage());
                                   } else {
                                     cartController.addToHistory();
-                                    Get.offNamed(RouteHelper.getInitial());
+                                    Get.toNamed(RouteHelper.getInitial());
                                   }
                                 } else {
                                   Get.toNamed(RouteHelper.getSignInPage());

@@ -18,6 +18,8 @@
 
 # Introducción
 
+
+
 ## Motivación y objetivos
 
 La principal motivación para realizar esta aplicación, ha sido debido a que un familiar, que vive en mi país (Marruecos), me comento que un amigo suyo que tiene un negocio de comida a domicilio, esta interesado en que alguna compañía le haga una pequeña aplicación en la que se puedan mostrar todas las comidas con las que cuenta la empresa y mostrar todos los productos que esta compañía ofrece, para que así los clientes se puedan descargar esta aplicación y puedan ver todas las comidas que ofrecen.
@@ -32,6 +34,8 @@ La app contara con un diseño muy amigable para el usuario y bastante sencilla d
 
 Entre mis principales objetivos, esta el aprender a utilizar Flutter y su lenguaje de programación Dart, ya que me parece un Framework muy llamativo y que deja resultados muy llamativos y limpios en cuanto al diseño de aplicaciones móviles.
 
+
+
 ## Descripción de la aplicación
 
 Se trata de una aplicación para Android/IOS, que funciona como una aplicación de envíos y reparto de comida a domicilio, con esta app también vamos a poder consultar los ingredientes de las comidas, vamos a poder ver la forma en la que se realizan estas comidas que ofrece la empresa detrás del envió de dicha comida.
@@ -41,6 +45,8 @@ La aplicación también nos permitirá escanear comidas, ya sea introduciendo im
 
 
 # Especificación de requisitos
+
+
 
 ## Requisitos funcionales
 
@@ -135,38 +141,364 @@ La aplicación también nos permitirá escanear comidas, ya sea introduciendo im
 - Incluiré un boceto de la apariencia que tendrá la aplicación, describiré brevemente los
   distintos ítems que aparecen en la pantalla:
 
+  **ICONO DE LA APP**
   
-
-
+  <img src="readmeImgs\icono.png" alt="logoInsti" style="zoom:50%;" />
+  
+  **SPLASH SCREEN**
+  
+  
+  
+  ![logoInsti](readmeImgs\splash.png)
+  
+  - Pantalla de inicio de carga de la app.
+  
+  
+  
+  **HOME SCREEN**
+  
+  
+  
+  ![logoInsti](readmeImgs\home.png)
+  
+  
+  
+  - En esta pantalla de home vamos a poder encontrar la sección principal de la app, donde podemos observar que en la parte inferior dentro de la app, contamos con la barra de navegación para dirigirnos a las distintas pantallas dentro de la app, también encontraremos dos secciones principales, la sección de comidas populares en la parte superior de la pantalla, y en la parte central encontramos las comidas recomendadas, también encontraremos el botón para acceder al escáner de imágenes, y justo  su izquierda encontraremos el titulo de la aplicación.
+  
+    
+  
+  **DETALLES DE COMIDA POPULAR**
+  
+  
+  
+  ![logoInsti](readmeImgs\popularDetail.png)
+  
+  
+  
+  - Si pulsamos sobre una comida popular accederemos a la pantalla de detalles de dicha comida, en esta pantalla vamos a poder consultar la descripción de la comida, la imagen de la comida,vamos a poder ver el numero de reviews que tiene esta comida, el lugar de procedencia de dicha comida, y el tiempo medio en el que se tarda en hacer dicha comida. Contaremos con un botón en la parte inferior derecha donde se muestra el precio de dicho producto y pulsando sobre este botón, podremos añadirlo a nuestro carrito. En la sección izquierda inferior, contamos con dos botones para aumentar la cantidad de este producto o disminuirla, el limite por pedido esta en 20 productos. En la sección superior contaremos con el botón para acceder al carrito, al igual que el botón para poder volver a la pantalla anterior a ésta.
+  
+    
+  
+  **DETALLES DE COMIDA RECOMENDADA**
+  
+  
+  
+  ![logoInsti](readmeImgs\recommendedDetail.png)
+  
+  
+  
+  - Al pulsar sobre una comida recomendada entraremos a la pantalla de descripción de dicha comida recomendada, la imagen de la comida, en esta pantalla vamos a poder añadir o restar productos recomendados, al igual que añadirlos al carrito, en la parte superior vamos a poder acceder al carrito de compra y volver a la pantalla anterior. 
+  
+  
+  
+  **CARRITO DE LA COMPRA**
+  
+  
+  
+  ![logoInsti](readmeImgs\carritoScreen.png)
+  
+  
+  
+  - En esta ventana veremos todos los productos que hemos ido añadiendo a nuestro carrito, desde esta pantalla vamos a poder añadir mas productos a cada uno de los que ya tenemos en el carrito, veremos una pequeña imagen de cada uno de los productos que hemos ido añadiendo, nombre, precio y numero de productos de este pedido, en la parte inferior veremos el total del pedido. También contaremos con el botón para volver a nuestra pantalla de home, también para poder volver a la ventana anterior a esta. A la hora de pulsar sobre confirmar el pedido, este se añadirá a nuestro historial de pedidos.
+  
+  
+  
+  **HISTORIAL DE PEDIDOS**
+  
+  
+  
+  ![logoInsti](readmeImgs\historyScreen.png)
+  
+  
+  
+  - En esta ventana vamos a poder consultar todos los pedidos que hemos hecho desde que descargamos la aplicación, si el pedido sigue existiendo vamos a poder añadir mas elementos a este pedido, si en el caso de que el producto que se pidió no existe, no podremos añadir mas productos de este. También podremos consultar la fecha en la que se hizo este pedido.
+  
+    
+  
+  **PERFIL SIN INICIAR SESIÓN**
+  
+  ![logoInsti](readmeImgs\iniciarSesion.png)
+  
+  
+  
+  - Al pulsar sobre el icono de usuario dentro de la barra de navegación, si estamos registrados se nos pedirá que iniciemos sesión, si no es así nos pedirá que iniciemos sesión pulsando sobre el botón azul.
+  
+    
+  
+  **INICIAR SESIÓN**
+  
+  
+  
+  ![logoInsti](readmeImgs\logIn.png)
+  
+  
+  
+  - En esta pantalla contaremos con un pequeño diseño donde vamos a poder introducir nuestras credenciales de registro, por lo tanto, podremos introducir nuestro teléfono y nuestra contraseña, si estamos registrados vamos a poder acceder y dirigirnos a la pantalla principal, pero si no lo estamos, debemos de pulsar sobre crear cuenta para crear una nueva cuenta.
+  
+  
+  
+  **CREAR CUENTA**
+  
+  
+  
+  ![logoInsti](readmeImgs\register.png)
+  
+  
+  
+  - En esta pantalla vamos a poder registrarnos, para registrarnos debemos de introducir un correo electrónico válido, una contraseña, nuestro nombre y teléfono. Finalmente solo debemos de pulsar en Registrarse, si estamos registrados podemos acceder rápidamente a la pantalla de inicio de sesión pulsando sobre Ya estas registrado?.
+  
+    
+  
+  **PERFIL DE USUARIO**
+  
+  
+  
+  ![logoInsti](readmeImgs\userScreen.png)
+  
+  
+  
+  - En esta pantalla veremos que cuando hemos iniciado sesión vamos a poder encontrar aquí todos nuestros datos, vamos a poder contactar con soporte, pulsando en soporte, seleccionar nuestra dirección de envió, y finalmente podremos encontrar el botón de cerrar sesión, para salir de nuestra cuenta.
+  
+    
+  
+  **IA SOPORTE TECNICO 24/7**
+  
+  
+  
+  ![logoInsti](readmeImgs\bot.png)
+  
+  
+  
+  - Al pulsar sobre soporte técnico, vamos a poder hablar con un robot que se encarga de contestar todas nuestras dudas que tengamos sobre la app, por lo tanto contaremos con un textBox donde podremos introducir el mensaje que queremos enviar, y pulsaremos en el botón de enviar, para enviar el mensaje. En la parte superior contaremos con un botón para poder volver a nuestra pantalla de home.
+  
+    
+  
+  **SELECCIONAR DIRECCIÓN**
+  
+  
+  
+  ![logoInsti](readmeImgs\direccionScreen.png)
+  
+  
+  
+  - Al pulsar sobre mi dirección vamos a poder acceder a la pantalla de dirección, en esta pantalla vamos a poder seleccionar nuestra dirección con ayuda de Google Maps, por lo tanto nos deslizaremos por el mapa para seleccionar nuestra dirección, también se muestran los datos de contacto, como nuestro nombre y nuestro numero de teléfono. Una vez que hayamos seleccionado nuestra dirección, vamos a poder pulsar sobre el botón de confirmar, para confirmar nuestra dirección. En la parte superior, contamos con un botón para poder volver a nuestra pantalla de inicio.
+  
+    
+  
+  **IA TIPOS DE COMIDAS**
+  
+  
+  
+  ![logoInsti](readmeImgs\clasificadorImg.png)
+  
+  
+  
+  - En esta pantalla vamos a poder ver la inteligencia artificial que he integrado en mi app, esta es la apariencia de la pantalla antes de escanear cualquier comida, en esta pantalla vamos a poder subir una imagen desde nuestra galería, o vamos a poder realizar una foto con nuestra cámara. Cuando hayamos seleccionado una imagen la pantalla cambiara al siguiente estado.
+  
+    
+  
+    ![logoInsti](readmeImgs\clasificadorLleno.png)
+  
+    
+  
+  - Cuando hayamos subido alguna imagen vamos a poder ver que nos dirá que comida es, por lo tanto la IA nos dice que comida es, también nos dirá el porcentaje de seguridad que tiene de que esa comida es la correcta, de acuerdo a la comida que se muestre, nos mostrará una descripción u otra , pulsando en el botón de mapa, nos dirigirá a Google Maps para que podamos ver en que zona cercana podemos comer dicha comida. En la parte superior vamos a poder pulsar sobre el botón de home para poder irnos a la pantalla de inicio.  
+  
+    
 
 # Análisis Funcional
 
-## Diagrama de clases
-
-A continuación voy a añadir el diagrama de clases, de cada una de mis clases que tiene la
-aplicación y las explicare brevemente.
-
-## Diagrama E/R
-
-Describe las tablas de la base de datos local e incluye un diagrama Entidad/Relación.
-
-## Plan de pruebas
-
-Define los casos de prueba que se deben realizar para comprobar el correcto funcionamiento de la aplicación móvil.
+## Diagrama de la Base de Datos
 
 
+
+![logoInsti](readmeImgs\baseDeDatos.png)
+
+
+
+- La base de datos solo tiene 6 tablas, he optado por una base de datos relacional, ya que tienes mas control sobre todos los campos, y así puedes asignar los valores a la hora de crearla mas fácilmente. Mi base de datos se compone de las siguientes tablas:
+
+  
+
+  **FOODS TYPES**
+
+  
+
+  ![logoInsti](readmeImgs\foodTypes.png)
+
+  - En esta tabla guardo los tipos de comidas, se compone de los campos de titulo de la comida, un identificador de comida, otro identificador para saber a que comida pertenece,la fecha de creación, fecha de actualización, una descripción, y por ultimo también guardo el numero de pedidos de la categoría de comida.
+
+    
+
+  **FOODS**
+
+  
+
+  ![logoInsti](readmeImgs\foods.png)
+
+  
+
+  - En esta tabla guardo datos sobre la comida, se compone de los siguientes campos, contiene un identificador de la comida, el nombre comida, descripción de esta comida, el precio de esta comida, numero de estrellas que tiene esta comida, people se refiere al campo de numero de reviews, selected_people al numero al tiempo que se tarda en hacer dicha comida, guardo la url también de la imagen de la comida en img, en location guardo la procedencia de la comida, fecha de creación y fecha de actualización, en cuanto al type_id se refiere a que categoría pertenece esta comida.
+
+    
+
+  **TOKKENS**
+
+  
+
+  ![logoInsti](readmeImgs\tokens.png)
+
+  
+
+  - En esta tabla almaceno los tokkens que genero para cada uno de los usuarios, guardamos el tipo de tokken, el id de dicho tokken, y las fechas de creación y actualización.
+
+    
+
+  **USUARIOS**
+
+  
+
+  ![logoInsti](readmeImgs\users.png)
+
+  
+
+  - En esta tabla se almacenan los datos de los usuarios, por lo tanto, tendremos el nombre del usuario, su teléfono, correo electrónico, fecha de verificación del correo electrónico, contraseña encriptada, token del usuario, fecha de creación del usuario, y fecha de actualización, también guardo el numero de pedidos que ha hecho el usuario.
+
+    
+
+  **DIRECCIÓNES DE CLIENTES**
+
+  
+
+  ![logoInsti](readmeImgs\direcciones.png)
+
+  
+
+  - En esta tabla se almacenan los datos de los clientes, respecto a las direcciones de dichos clientes, por lo tanto almacenamos el tipo de dirección, que puede ser, casa, trabajo u otros, el numero de teléfono de dicho cliente, dirección, la latitud de su dirección, y altitud, nombre del cliente y fechas de creación y actualización. 
+
+    
+
+  **USUARIOS ADMINISTRADORES**
+
+  
+
+  ![logoInsti](readmeImgs\adminUsers.png)
+
+  
+
+  - Esta tabla esta reservada para el backend, ya que en esta tabla es donde inserto los usuarios administradores de mi cms, por lo tanto en esta tabla guardo el nombre de usuario, contraseña de administrador, nombre, y la imagen que es un avatar, tokken de dicho usuario, fecha de creación y fecha de actualización. 
+
+
+## Backend
+
+![logoInsti](readmeImgs\laravel.png)
+
+Para el backend de la aplicación he utilizado un framework llamado Laravel:
+
+- **LARAVEL**
+
+  Laravel es un framework de código abierto que que sirve para desarrollar aplicaciones y servicios web usando el lenguaje PHP, Laravel te permite desarrollar código en PHP de forma elegante y simple, Laravel esta hecho con la arquitectura MVC, gracias a Laravel, se aprovechan al máximo las últimas versiones de PHP, Laravel cuenta con muchísima documentación a través de internet, que te permite desarrollar cualquier tipo de funcionalidad de forma bastante rápida.
+
+## Wireframe CMS
+
+
+
+![logoInsti](readmeImgs\cms1.png)
+
+
+
+Para administrar los datos de la aplicación he creado una web(CMS), para manejar todos los datos, esta web consta de tres apartador principales, el apartado para crear categorías de comidas, para crear usuarios, y para crear comidas. En la imagen que se encuentra encima de este párrafo, tenemos la apariencia principal de la web del CMS. Consta de un menú lateral donde tengo todas las opciones que se pueden seleccionar. Una imagen del usuario.
+
+
+
+![logoInsti](readmeImgs\cms2.png)
+
+
+
+Si pinchamos en el apartado de Categorías de Comidas, vamos a entrar al apartado de categorías de comidas, como en mi aplicación solo tengo dos categorías de comidas, solo he creado estas dos. Luego también hay creada una categoría general, que engloba todas las categorías en una. Todas las comidas. Si quiero crear una nueva categoría simplemente podemos pulsar en New, y se nos abrirá el siguiente formulario:
+
+
+
+![logoInsti](readmeImgs\cms5.png)
+
+
+
+Dentro de este formulario podremos crear una nueva categoría de comida, por lo tanto le pondremos un nombre a la categoría una descripción y por ultimo el numero de pedidos limite que tendrá dicha categoría.
+
+
+
+![logoInsti](readmeImgs\cms3.png)
+
+
+
+Si ahora en el menú seleccionamos la opción de Usuarios, nos vamos a dirigir al apartado de usuarios, donde vamos a poder encontrar todos los usuarios registrados en la app, si queremos podemos crear nuevos usuarios, pulsando en el botón de New.
+
+
+
+![logoInsti](readmeImgs\cms6.png)
+
+
+
+Para el usuario, se requiere de un nombre, un correo electrónico, y una contraseña, el tokken lo podemos dejar vacío, ya que se generara automáticamente.  Finalmente podemos pulsar en el botón de Submit para guardar los cambios.
+
+
+
+![logoInsti](readmeImgs\cms4.png)
+
+
+
+En el menú si ahora pulsamos sobre el apartado de Comidas, vamos a poder acceder a la sección de comidas, donde podemos encontrar todas las comidas que e muestran dentro de la app, para poder crear una nueva comida podemos pulsar sobre el botón de New, y se nos mostrara el siguiente formulario:
+
+
+
+![logoInsti](readmeImgs\cms7.png)
+
+
+
+Para la comida, vamos a necesitar introducir, el nombre de la comida, debemos de seleccionar a que categoría pertenece, el precio de esta comida, el lugar de procedencia de dicha comida, el numero de estrellas que tiene dicha comida, el tiempo que normalmente se tarda en hacer esta comida, numero de reviews que tiene esta comida, también guardamos la URL de la imagen, y una descripción de dicha comida. Finalmente podremos pulsar en Submit, para guardar la comida.
 
 # Diseño Técnico
 
-## Diagrama de paquetes y de componentes
+## Diagrama de paquetes y clases
 
-Se debe incluir un diagrama de paquetes, de componentes, etc.
 
-También se puede incluir la estructura y descripción de los ficheros que forman parte del proyecto. Descripción 
 
-de algoritmos, etc.
+![logoInsti](readmeImgs\DiagramaDePaquetes.png)
+
+
+
+## Sistema de ficheros
+
+- Explicaré el sistema de archivos de mi proyecto, lo que contiene cada carpeta:
+
+  
+
+  ![logoInsti](readmeImgs\ficheros.png)
+
+  
+
+  - Mi proyecto se compone de una carpeta principal, llamada **lib**, dentro de esta carpeta se encuentra todo el código fuente que he utilizado dentro de la app, dentro de la carpeta **base** podemos encontrar el código fuente de los distintos botones reutilizables dentro de la app, botones que utilizo en varios momentos dentro de la app, para que no se haga repetitivo el código, y sea reutilizable.
+
+  - Dentro de la carpeta **controllers**, encontramos cada uno de los controladores que se utilizan para manejar los datos que viene  del servidor, por ejemplo, del servidor obtenemos las comidas populares y recomendadas, por lo tanto habrá un controlador de comidas, en el que tenemos aquellos métodos y atributos necesarios para el manejo de estos datos. 
+
+  - En la carpeta **data** encontramos dos subcarpetas, en la carpeta de api, tengo los dos métodos que utilizo para conectarme al servidor, por método POST/GET. En la carpeta de repository, tengo cada uno de los repositorios de cada uno de los modelos, por lo tanto para comunicarme con el servidor tengo que instanciar un objeto de la clase repository, que este tiene la llamada al servidor, para obtener los datos necesarios, ya sea por método GET o POST.
+
+  - Dentro de la carpeta de **helper**, cuento con la inyección de datos, gracias a la librería de GetX, por lo tanto esta clase me permite el acceso de todos los métodos desde cualquier otra clase sin necesidad de instanciar un objeto de dicha clase.
+
+  - En la carpeta de **models** se encuentran todos los modelos utilizados en la app, por lo tanto por modelo tendremos un **repository** y un **controller**. Siguiendo el estándar de MVC.
+
+  - En la carpeta de **routes** tengo todos los cambios de pantalla que hago dentro de la app, por lo tanto para ir de una pantalla a otra, simplemente llamado a esta clase estática y llamo al respectivo método que me lleva a la pantalla que necesito. Dentro de esta clase también controlo las transacciones entre estas pantallas.
+
+  - Dentro de la carpeta de **screen**, tengo todas las pantallas de la app, el diseño de estas pantallas, creo una subcarpeta por pantalla para que así, si necesito utilizar otra clase dentro de esta pantalla, puedo crearla dentro de la propia carpeta de la pantalla.
+
+  - En la carpeta de **utils**, tengo aquellas clases estáticas que utilizo en toda la app, como por ejemplo los colores dentro de la app, las constantes de tipo string, o por ejemplo algunas redirecciones de google maps dentro de la app, esta clase me da acceso rápido a todas aquellas constantes.
+
+  - Finalmente en la carpeta de **widgets**, tengo aquellos widgets completos, o diseños reutilizables que uso a lo largo de la app, distintos diseños que comparten varias pantallas, las tengo incluidas en esta carpeta.
+
+    
 
 ## Arquitectura del sistema
+
+
 
 ![logoInsti](readmeImgs\KuEatDiagram.png)
 
@@ -182,11 +514,51 @@ de algoritmos, etc.
 
 ![authDiagram](readmeImgs\AuthDiagram.png)
 
+
+
 - Como dentro de la aplicación contamos con registro e inicio de sesión de usuarios, necesitamos de una arquitectura de autentificación del usuario.
 - En el apartado de **Registro** el usuario, rellena el formulario que se muestra dentro de la app, rellenando todos los datos, de numero de teléfono, nombre, correo electrónico y contraseña, este formulario primero se valida dentro de la app, para ver si es correcto el formato, si el número de teléfono es correcto, la contraseña es de mas de 6 caracteres, y el correo electrónico también es válido.
 - Seguidamente estos datos se envían al controlador de autentificación, para convertir dichos datos a formato JSON, y seguidamente se lo pasamos a nuestro repositorio dentro de la aplicación.
 - Este repositorio se comunica con la API REST, se validan los datos en nuestro servidor, para comprobar que dicho usuario no existe en la base de datos, o que dicho numero de teléfono o correo electrónico es único, si todo es correcto, se manda una respuesta a nuestra app de nuevo, si esta respuesta es 200, podemos verificar que todo el proceso de registro a sido correcto y dejaremos que el usuario tenga acceso completo a la aplicación, cabe destacar que a dicho usuario se le asigna un tokken único, para que luego pueda volver a iniciar sesión correctamente.
 - En el caso de **Inicio de Sesión**, el usuario debe de introducir su numero de teléfono y su contraseña para iniciar sesión, de nuevo se validara si los datos son correctos, si dichos datos existen en la base de datos, se recupera el tokken de dicho usuario, para que pueda acceder correctamente a la aplicación con sus datos.
+
+
+
+## Api Rest
+
+- En cuanto a la comunicación entre la app móvil y el servidor, contamos con una api, a continuación muestra las llamadas a la api y los resultados que esta devuelve en formato JSON.
+
+- **PETICIONES GET**
+
+  - Petición para obtener las comidas recomendados.
+
+    
+
+  ![authDiagram](readmeImgs\get1.png)
+
+  
+
+  - Respuesta de comidas recomendados. Se obtienen todos los productos recomendados, cada uno con su respectivo campo, se devuelve el tamaño del numero de productos existentes, al igual que en los productos populares.
+
+    
+
+  ![authDiagram](readmeImgs\get1.1.png)
+
+  
+
+  - Petición para obtener las comidas populares
+
+    
+
+    ![authDiagram](readmeImgs\get2.png)
+
+    
+
+  - Respuesta de comidas populares
+
+    
+
+    ![authDiagram](readmeImgs\get2.2.png)
 
 ## Entorno de desarrollo, librerías y servicios
 
@@ -194,6 +566,8 @@ En este punto se explicarán las diferentes tecnologías utilizadas para la real
 así como los elementos más importantes que permitan entender el funcionamiento del sistema.
 
 - **ENTORNO DE DESAROLLO** 
+
+  
 
   ![authDiagram](readmeImgs\vscode.png)
 
@@ -217,6 +591,8 @@ así como los elementos más importantes que permitan entender el funcionamiento
     3. El **desarrollo es muy rápido**, permite ver el resultado de forma instantánea mientras se escribe el código.
 
 - Flutter me ha permitido desarrollar la UI muy rápidamente, ya que con los widgets se hace muy rápido el hecho de mostrar elementos en la pantalla, además te permite tener el control absoluto sobre cada elemento en la pantalla. En Flutter, se programa en su lenguaje llamado Dart, es un lenguaje muy parecido a Java, tiene una sintaxis muy parecida pero con algunos algoritmos propios de Dart, pero es bastante sencillo programar en este lenguaje, si se ha programado en Java, no se hace muy complicado utilizarlo.
+
+  
 
 - **LIBRERIAS UTILIZADAS** 
 
@@ -264,7 +640,7 @@ así como los elementos más importantes que permitan entender el funcionamiento
 
     La biblioteca más importante es intl. Define la clase Intl, con la configuración regional predeterminada y los métodos para acceder a la mayoría de los mecanismos de internacionalización. Esta biblioteca también define las clases DateFormat, NumberFormat y BidiFormatter.
 
-  - **TfLite**
+  - **Tflotter**
 
     Un complemento de Flutter para acceder a la API de TensorFlow Lite. Admite clasificación de imágenes, detección de objetos (SSD y YOLO), Pix2Pix y Deeplab y PoseNet en iOS y Android.
 
@@ -296,19 +672,27 @@ así como los elementos más importantes que permitan entender el funcionamiento
 
 ## Instrucciones para la compilación, ejecución y despliegue de la aplicación
 
-Describe los pasos a seguir para poder compilar el proyecto y ejecutarlo.
-
-## Informe de pruebas
-
-### Pruebas en emuladores y dispositivos reales
-
-Incluye pantallazos de la ejecución de los casos de prueba realizadas en los emuladores y dispositivos reales.
-
-### Pruebas remotas
-
-Incluye pantallazos de la ejecución de los casos de prueba realizadas en dispositivos reales remotos.
+Sencillamente, para instalar la aplicación os dirigís a la pagina web de KuEat:
 
 
+
+![](readmeImgs\web1.png)
+
+
+
+https://kueatweb.herokuapp.com/
+
+
+
+![](readmeImgs\web2.png)
+
+
+
+- Esta es mi pagina web oficial donde podéis dirigiros a ella pinchando en el enlace de arriba, una vez pinchado arriba, vamos a deslizar un poco hacia abajo dentro de la pagina web, y pulsaremos en el botón de Android. Este botón nos dirigirá, a un enlace de Google Drive donde vamos a poder descargar el Apk de la app.
+
+- También podremos ver un tutorial para como poder instalar un Apk.
+
+  
 
 # Conclusiones
 
@@ -329,3 +713,9 @@ Otra de las mejoras que seria interesante incluir dentro de la app, es poder ten
 También estaría bien la posibilidad de permitir al usuario que recupere su contraseña, si se da el caso de que el usuario ha olvidado su contraseña.
 
 Dentro del apartado de usuario también estaría bien permitir que el usuario pudiera registrarse usando Google.
+
+También me gustaría separar la funcionalidad de la IA en otro backend diferente, en Python, ya que es mucho mas rápido escanear imágenes y procesarlas en Python, por lo tanto podría, realizar la foto o subir la imagen, enviándosela al servidor y que este la procese y en la respuesta que venga la imagen ya procesada con sus respectivos datos.
+
+Sin lugar a duda me gustaría integra en la aplicación la posibilidad de crear un sistema de pedidos, en el cual el usuario tenga generada una orden de compra y esta se cumpla en función de las ordenes pendientes, integrando el sistema de pedidos tradicional que se usa en casa todas las empresas de reparto.
+
+Por ultimo, me hubiera gustado mejorar los mapas integrados dentro de mi app, pudiendo crear rutas dinámicas, mostrando donde se encuentra el pedido en cada momento del reparto, básicamente obteniendo la posición del repartidor a cada momento.

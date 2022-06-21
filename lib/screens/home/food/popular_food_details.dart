@@ -2,16 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:food_delivery/controllers/cart_controller.dart';
 import 'package:food_delivery/controllers/popular_product_controller.dart';
 import 'package:food_delivery/routes/route_helper.dart';
-import 'package:food_delivery/utils/app_constants.dart';
+
 import 'package:food_delivery/utils/dimensions.dart';
-import 'package:food_delivery/widgets/app_column.dart';
+
 import 'package:food_delivery/widgets/app_icon.dart';
 import 'package:get/get.dart';
 import '../../../utils/colors.dart';
 import '../../../widgets/big_text.dart';
 import '../../../widgets/extendable_text.dart';
 import '../../../widgets/icon_and_text_widget.dart';
-import '../../../widgets/small_text.dart';
 
 class PopularFoodDetail extends StatelessWidget {
   final int pageId;
@@ -155,7 +154,7 @@ class PopularFoodDetail extends StatelessWidget {
                                 text: product.reviews!.toString() + " reviews",
                                 iconColor: AppColors.iconColor1),
                             IconAndTextWidget(
-                                icon: Icons.location_on,
+                                icon: Icons.not_listed_location_sharp,
                                 text: product.location!,
                                 iconColor: Colors.blue),
                             IconAndTextWidget(

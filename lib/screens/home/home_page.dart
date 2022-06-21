@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/screens/account/account_page.dart';
 import 'package:food_delivery/screens/home/cart/cart_history.dart';
-import 'package:food_delivery/screens/home/cart/cart_page.dart';
+
 import 'package:food_delivery/screens/home/main_food_page.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 

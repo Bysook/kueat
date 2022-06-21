@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/controllers/auth_controller.dart';
 import 'package:food_delivery/controllers/cart_controller.dart';
@@ -14,8 +13,6 @@ import 'package:food_delivery/widgets/big_text.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-import '../../widgets/app_icon.dart';
-
 class AddAddressPage extends StatefulWidget {
   AddAddressPage({Key? key}) : super(key: key);
 
@@ -28,10 +25,9 @@ class _AddAddressPageState extends State<AddAddressPage> {
   final TextEditingController _contactPersonName = TextEditingController();
   final TextEditingController _contactPersonNumber = TextEditingController();
   late bool _isLogged;
-  CameraPosition _cameraPosition = const CameraPosition(
+  CameraPosition _cameraPosition = CameraPosition(
       target: LatLng(38.77369648887228, -3.397516591514719), zoom: 17);
-  late LatLng _initialPosition =
-      const LatLng(38.77369648887228, -3.397516591514719);
+  late LatLng _initialPosition = LatLng(38.77375504016968, -3.397602422255243);
 
   @override
   void initState() {
@@ -65,10 +61,18 @@ class _AddAddressPageState extends State<AddAddressPage> {
       appBar: AppBar(
         title: Text("Dirección"),
         backgroundColor: AppColors.mainColor,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.home_rounded),
+            color: Colors.white,
+            onPressed: () {
+              Get.toNamed(RouteHelper.getInitial());
+            },
+          )
+        ],
       ),
       body: GetBuilder<UserController>(builder: (userController) {
-        if (userController.userModel != null &&
-            _contactPersonName.text.isEmpty) {
+        if (_contactPersonName.text.isEmpty) {
           _contactPersonName.text = '${userController.userModel.name}';
           _contactPersonNumber.text = '${userController.userModel.phone}';
           if (Get.find<LocationController>().addressList.isNotEmpty) {
@@ -257,10 +261,14 @@ class _AddAddressPageState extends State<AddAddressPage> {
                             Get.find<CartController>().addToHistory();
                             Get.toNamed(RouteHelper.getInitial());
                             Get.snackbar(
-                                "Dirección", "Dirección añadida correctamente");
+                                "Dirección", "Dirección añadida correctamente",
+                                backgroundColor: AppColors.mainColor,
+                                colorText: Colors.white);
                           } else {
                             Get.snackbar("Dirección",
-                                "No se ha podido guardar la dirección");
+                                "No se ha podido guardar la dirección",
+                                backgroundColor: AppColors.mainColor,
+                                colorText: Colors.white);
                           }
                         });
                       },
